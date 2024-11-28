@@ -1,0 +1,158 @@
+nav {
+    display: grid;
+    grid-template-columns: repeat(10, 10%);
+    width: 100cqw;
+    align-items: center;
+    height: 50px;
+}
+
+section[class="logo"] {
+    grid-column: 2/4;
+    height: 50px;
+}
+
+section[class="logo"] svg {
+    height: 100%;
+    width: 100%;
+}
+
+menu[id="header-menu"] {
+    grid-column: 4/9;
+    display: grid;
+    grid-template-rows: subgrid;
+    grid-auto-flow: column;
+    align-items: center;
+}
+
+menu[id="header-menu"] li:nth-of-type(1) {
+    grid-column: 6/7;
+}
+
+menu[id="header-menu"] li:nth-of-type(2) {
+    grid-column: 7/8;
+}
+
+menu[id="header-menu"] li:nth-of-type(3) {
+    grid-column: 8/9;
+
+}
+menu[id="header-menu"] li:nth-of-type(4) {
+    grid-column: 9/10;
+}
+
+menu[id="header-menu"] li:focus {
+    border: 3px solid gainsboro;
+}
+
+nav button {
+    grid-column: 9/10;
+}
+
+menu {
+    list-style-type: none;
+}
+
+label[for="open-menu"],
+label[for="close-menu"] {
+    display: none;
+}
+
+input[name="mobile-menu"] {
+    display: none;
+}
+
+button {
+    background: white;
+    color: black;
+    border-radius: 30px;
+    border-color: transparent;
+    padding: 5px 20px 5px 20px;
+    cursor: pointer;
+}
+button:hover{
+    color:white;
+    background: transparent;
+    filter: contrast(1);
+}
+
+@container (inline-size < 1000px) {
+
+    label[for="open-menu"],
+    label[for="close-menu"] {
+        display: grid;
+        height: 25px;
+        width: 25px;
+        align-items: center;
+        grid-column: 9/10;
+        justify-self: end;
+    }
+
+    label svg {
+        height: 100%;
+        width: 100%;
+
+    }
+   
+    nav:has(input[id="close-menu"]:checked) {
+        label[for="open-menu"] {
+            display: grid;
+        }
+
+        label[for="close-menu"] {
+            display: none;
+        }
+        menu[id="header-menu"] {
+            display: none;
+        }
+    }
+
+    nav:has(input[id="open-menu"]:checked) {
+        label[for="close-menu"] {
+            display: grid;
+        }
+
+        label[for="open-menu"] {
+            display: none;
+        }
+
+        menu[id="header-menu"] {
+            display: grid;
+            background: white;
+            grid-column: unset;
+            grid-auto-flow: row;
+            grid-auto-rows: 1fr;
+            place-items: center;
+            position: absolute;
+            top: 100px;
+            right: 10cqw;
+            width: 80cqw;
+            height: 30cqh;
+            margin: 0;
+            color: var(--grayish-blue);
+            font-weight: 700;
+            padding: 0;
+        }
+
+        menu[id="header-menu"]:before {
+            content: "";
+            height: 0px;
+            width: 0px;
+            position: absolute;
+            top: -50px;
+            right: 0;
+            border-bottom: 50px solid white;
+            border-left: 50px solid transparent;
+        }
+
+        menu[id="header-menu"] li {
+            grid-column: unset;
+        }
+
+        button {
+            background: var(--yellow);
+            color: black;
+            padding: 10px 20px 10px 20px;
+            font-weight: 800;
+        }
+    }
+}

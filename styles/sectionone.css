@@ -1,0 +1,38 @@
+section[class="one"] {
+    height: 40cqh;
+    width: 100cqw;
+    display: grid;
+    place-items: center;
+}
+
+section[class="one"] img {
+    width: 100%;
+    object-fit: fill;
+    z-index: -1;
+    position: absolute;
+    height: 40cqh;
+}
+
+section[class="one"] span {
+    display: grid;
+    place-items: center;
+    transform: translateY(-3cqh);
+}
+
+section[class="one"] span svg {
+    height: 50px;
+    width: 100%;
+}
+
+h1 {
+    font-size: xx-large;
+    text-transform: uppercase;
+}
+@container (inline-size<1000px){
+    section[class="one"] img {
+        object-fit: cover;
+    }
+    h1 {
+        font-size: x-large;
+    }
+}

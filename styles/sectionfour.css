@@ -1,0 +1,26 @@
+section[class="four"]{
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 25cqw;
+    margin-top: 100px;
+}
+section[class="four"] img {
+	object-fit: contain;
+	width: 100%;
+	height: 100%;
+}
+@container (inline-size<1000px){
+    section[class="four"]{
+        display: grid;
+        grid-auto-flow: row;
+        grid-template-columns: 50cqw 50cqw;
+        margin-top: 100px;
+    }   
+    section[class="footer-menu"]{
+        display: grid;
+        width: 50%;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 5px;
+    }
+
+}
