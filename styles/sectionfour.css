@@ -16,11 +16,4 @@ section[class="four"] img {
         grid-template-columns: 50cqw 50cqw;
         margin-top: 100px;
     }   
-    section[class="footer-menu"]{
-        display: grid;
-        width: 50%;
-        grid-template-columns: 1fr 1fr 1fr;
-        gap: 5px;
-    }
-
 }

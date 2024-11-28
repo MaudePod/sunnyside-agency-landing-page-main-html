@@ -1,71 +1,7 @@
+@import url(./styles/base.css) layer(general);
 @import url(./styles/navigation.css) layer(general);
 @import url(./styles/sectionone.css) layer(general);
 @import url(./styles/sectiontwo.css) layer(general);
 @import url(./styles/sectionthree.css) layer(general);
 @import url(./styles/sectionfour.css) layer(general);
 @import url(./styles/footer.css) layer(general);
-:root {
-    /*Primary*/
-    --soft-red: hsl(7, 99%, 70%);
-    --yellow: hsl(51, 100%, 49%);
-    --dark-desaturated-cyan: hsl(167, 40%, 24%);
-    --dark-blue: hsl(198, 62%, 26%);
-    --dark-moderate-cyan: hsl(168, 34%, 41%);
-    /*Neutral*/
-    --very-dark-desaturated-blue: hsl(212, 27%, 19%);
-    --very-dark-grayish-blue: hsl(213, 9%, 39%);
-    --dark-grayish-blue: hsl(232, 10%, 55%);
-    --grayish-blue: hsl(210, 4%, 67%);
-}
-
-html {
-    /* color-scheme: dark light; */
-}
-
-* {
-    box-sizing: border-box;
-}
-
-a {
-    appearance: none;
-}
-
-:visited,
-:link {
-    color: unset;
-}
-
-:any-link {
-    text-decoration: none;
-}
-
-body {
-    display: grid;
-    width: 100svw;
-    min-height: 100svh;
-    container: body / inline-size;
-    margin: 0;
-    justify-items: center;
-}
-
-main {
-    display: grid;
-    width: 100cqw;
-    max-width: 1440px;
-    min-height: 100cqh;
-    grid-auto-rows: max-content;
-    container: main / inline-size;
-}
-
-header {
-    display: grid;
-    width: 100cqw;
-    max-width: 1440px;
-    container: header /inline-size;
-    position: absolute;
-    top:0;
-    z-index: 2;
-}   
-svg[id="svgs"]{
-    display: none;
-}
