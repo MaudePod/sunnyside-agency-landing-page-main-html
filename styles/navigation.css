@@ -18,7 +18,7 @@ section[class="logo"] svg {
 }
 
 menu[id="header-menu"] {
-    grid-column: 4/9;
+    grid-column: 5/10;
     display: grid;
     grid-template-rows: subgrid;
     grid-auto-flow: column;
