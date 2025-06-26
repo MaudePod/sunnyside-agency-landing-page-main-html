@@ -38,7 +38,7 @@ a {
 
 body {
     display: grid;
-    width: 100svw;
+    max-width: 100svw;
     min-height: 100svh;
     container: body / inline-size;
     margin: 0;
@@ -74,4 +74,7 @@ h1{
 }   
 svg[id="svgs"]{
     display: none;
+}
+div[class="attribution"]{
+    background-color: var(--dark-desaturated-cyan);
 }
